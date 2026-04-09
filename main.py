@@ -20,7 +20,7 @@ app.add_middleware(
 # -------------------------------
 CONVERSION_FACTOR = 0.092903
 
-ALLOWED_FAMILIES = ['Antenna', 'RRU', 'Antenna Air', 'Parabola', 'Platform']
+ALLOWED_FAMILIES = ['Antenna', 'RRU', 'Antenna Wifi', 'Parabola', 'Platform']
 
 COLUMNS_TO_CHECK = [
     'Height', 'Width', 'Ice_Thickness', 'Weight', 'Ice_Weight',
