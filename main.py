@@ -9,7 +9,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://lemaashon.github.io/VT-WEB-APP-FRONTEND/", "https://vt-web-app-frontend.vercel.app/"],
+    allow_origins=["https://lemaashon.github.io/VT-WEB-APP-FRONTEND", 
+                   "https://vt-web-app-frontend.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
