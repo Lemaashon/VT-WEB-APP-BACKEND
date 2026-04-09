@@ -163,7 +163,7 @@ def process_dataframe(df):
 # MAIN ENDPOINT
 # -------------------------------
 
-@app.post("/upload-ifc/")
+@app.post("/upload-ifc")
 async def upload_ifc(files: list[UploadFile] = File(...)):
 
     if not files:
