@@ -9,14 +9,14 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://lemaashon.github.io/VT-WEB-APP-FRONTEND/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # -------------------------------
-# YOUR EXTRACTION LOGIC (simplified integration)
+# EXTRACTION LOGIC (simplified integration)
 # -------------------------------
 CONVERSION_FACTOR = 0.092903
 
@@ -66,7 +66,6 @@ def extract_info(model, id_start=201):
     for prop in properties:
         if prop.Name == 'Site Code':
             # prop.NominalValue returns the IFCTEXT object.
-            # .wrappedValue extracts the actual Python string (e.g., 'PT-TIMS-57395')
             site_code = prop.NominalValue.wrappedValue
             break
     loaded_equipments = _cache_elements(model)
