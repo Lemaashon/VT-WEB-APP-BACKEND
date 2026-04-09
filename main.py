@@ -77,7 +77,7 @@ def extract_info(model, id_start=201):
         for item in equip:
             psets = ifcopenshell.util.element.get_psets(item)
             data_sched = psets.get(sched, {})
-            allowed_families = ['Antenna', 'RRU', 'Antenna Air', 'Parabola', 'Platform']
+            allowed_families = ['Antenna', 'RRU', 'Antenna Wifi', 'Parabola', 'Platform']
             family_type = data_sched.get("Type Comments", r"\N")
             if family_type in allowed_families:
                 row = {
